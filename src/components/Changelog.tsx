@@ -1,6 +1,7 @@
 // @ts-ignore
 import changelogRaw from '../../CHANGELOG.md?raw';
 import { useMemo } from 'react';
+import './Changelog.css';
 
 function parseSimpleMarkdown(md: string) {
   // Very small markdown -> HTML converter for headings, lists and paragraphs

@@ -1,0 +1,70 @@
+.changelog {
+  background-color: #f9f9f9; /* leicht grauer Hintergrund */
+  padding: 2rem 0; /* vertikale Abstände */
+  color: #333;
+  font-family: 'Lexend', sans-serif;
+  line-height: 1.6;
+}
+
+.changelog .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.changelog h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ff303e; /* subtile Linie unter Hauptüberschrift */
+  padding-bottom: 0.5rem;
+  color: #ff303e;
+}
+
+.changelog h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #213547;
+  border-left: 4px solid #ff303e; /* Highlight für Versionen */
+  padding-left: 0.75rem;
+}
+
+.changelog h3 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #535353;
+}
+
+.changelog p {
+  margin-bottom: 1rem;
+}
+
+.changelog ul {
+  margin: 0.5rem 0 1.5rem 1.25rem;
+  padding: 0;
+}
+
+.changelog ul li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+  color: #444;
+}
+
+.changelog li a {
+  color: #ff303e;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .changelog h1 {
+    font-size: 2rem;
+  }
+  .changelog h2 {
+    font-size: 1.5rem;
+  }
+  .changelog h3 {
+    font-size: 1.2rem;
+  }
+}

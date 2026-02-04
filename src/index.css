@@ -14,6 +14,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --container-padding: 1rem; /* 16px */
+  --max-width: 1290px;
 }
 
 a {
@@ -29,6 +31,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -61,6 +65,10 @@ h6 {
   line-height: 1.35;
 }
 
+a {
+  color: #ff303e;
+}
+
 button {
   border-radius: 99px;
   border: 1px solid transparent;
@@ -87,24 +95,24 @@ input {
   height: 48px;
 }
 
+input:focus {
+  border: 1px solid #ff303e;
+  outline: none;
+}
+
 img {
   display: block;
   border-radius: 18px;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.25rem 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 1290px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: var(--max-width); /* Optional: Begrenzung bei großen Bildschirmen */
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box; /* wichtig für Padding */
 }
 
 .item {
@@ -136,7 +144,7 @@ header {
 }
 
 /* For wide screens ensure exactly 3 equal columns */
-@media (min-width: 1100px) {
+@media (min-width: 769px) {
   .cards-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -163,8 +171,8 @@ header {
 }
 .footer a.footer-link {
   margin-left: 1rem;
-  color: inherit;
-  text-decoration: underline;
+  color: #ff303e;
+  text-decoration: none;
 }
 
 /* Changelog page */

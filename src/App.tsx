@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import RestaurantList from './components/RestaurantList';
-import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import Changelog from './components/Changelog';
+import NavBar from './components/NavBar';
 
 function App() {
   const [page, setPage] = useState(() =>
@@ -19,11 +19,13 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <NavBar />
       {page === 'home' ? (
         <>
           <Hero />
-          <RestaurantList />
+          <div className="container">
+            <RestaurantList />
+          </div>
         </>
       ) : (
         <Changelog />
