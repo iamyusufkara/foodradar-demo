@@ -18,5 +18,24 @@ Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokument
 ---
 
 ## [Unreleased]
+- Zukünftige Änderungen werden hier dokumentiert.
+
+- Kleinere Verbesserungen und Bugfixes
+
+---
+
+## [0.1.1] - 2026-02-04
+
+### Hinzugefügt
+
+- Kleine UI-Optimierungen und Performance-Verbesserungen.
+
+### Behoben
+
+- Kleinere Fehlerkorrekturen im Layout und bei der Darstellung von Restaurant-Karten.
+
+---
+
+## [Unreleased]
 
 - Zukünftige Änderungen werden hier dokumentiert.
