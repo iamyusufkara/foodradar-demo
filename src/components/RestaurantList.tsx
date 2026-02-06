@@ -1,15 +1,7 @@
-import restaurantsData from '../data/restaurants.json';
-
-type Restaurant = {
-  id: string;
-  name: string;
-  cuisine: string;
-  images: { cover: string; gallery?: string[] };
-};
+import { Link } from 'react-router-dom';
+import { restaurants } from '../data/restaurants';
 
 function RestaurantList() {
-  const restaurants: Restaurant[] = (restaurantsData as { restaurants: Restaurant[] }).restaurants;
-
   return (
     <>
       <div className="container">
@@ -18,11 +10,13 @@ function RestaurantList() {
 
       <div className="cards-row">
         <div className="cards-grid">
-          {restaurants.map((rest) => (
-            <div key={rest.id} className="item">
-              <img src={rest.images.cover} style={{ width: '100%', height: 'auto' }} />
-              <h4>{rest.name}</h4>
-              <p>{rest.cuisine}</p>
+          {restaurants.map((restaurant) => (
+            <div key={restaurant.id} className="item">
+              <Link to={`/restaurants/${restaurant.id}`}>
+                <img src={restaurant.images.cover} style={{ width: '100%', height: 'auto' }} />
+                <h4>{restaurant.name}</h4>
+                <p>{restaurant.cuisine}</p>
+              </Link>
             </div>
           ))}
         </div>

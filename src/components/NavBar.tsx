@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import Button from './Button';
 import './NavBar.css';
 
@@ -14,7 +15,9 @@ const NavBar = () => {
     <>
       <nav className="navbar">
         <div className="top-row">
-          <div className="logo">foodradar</div>
+          <Link to="/" className="logo">
+            foodradar
+          </Link>
 
           {/* Desktop Suche */}
           <div className="search desktop">
@@ -25,10 +28,10 @@ const NavBar = () => {
           <div className="desktop-nav desktop">
             <ul className="nav-links">
               <li>
-                <a href="#">Hilfe & Support</a>
+                <NavLink to="/help">Hilfe & Support</NavLink>
               </li>
               <li>
-                <a href="#">Registrieren</a>
+                <NavLink to="/register">Registrieren</NavLink>
               </li>
             </ul>
             <Button color="primary">Anmelden</Button>
